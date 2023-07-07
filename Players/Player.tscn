@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://m3tq43uenlg7"]
+[gd_scene load_steps=28 format=3 uid="uid://m3tq43uenlg7"]
 
 [ext_resource type="Script" path="res://Players/Player.gd" id="1_dqlbw"]
 [ext_resource type="Texture2D" uid="uid://bvu1qgqt2hlk4" path="res://Assets/Sunny-land-assets-files/PNG/spritesheets/player-hurt.png" id="2_2q6jo"]
@@ -202,9 +202,65 @@ tracks/0/keys = {
 "values": [1]
 }
 
+[sub_resource type="Animation" id="Animation_0lerx"]
+resource_name = "Jump"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Jump"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_muhn7"]
+resource_name = "Fall"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Jump"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qwv6n"]
 _data = {
+"Fall": SubResource("Animation_muhn7"),
 "Idle": SubResource("Animation_4ik6w"),
+"Jump": SubResource("Animation_0lerx"),
 "RESET": SubResource("Animation_wrt3r"),
 "Run": SubResource("Animation_yvlcl")
 }
@@ -217,7 +273,7 @@ shape = SubResource("CapsuleShape2D_xxvpc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_l5gmo")
-animation = &"Run"
+animation = &"Jump"
 frame = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
