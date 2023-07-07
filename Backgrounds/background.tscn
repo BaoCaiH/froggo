@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://dl88or6dnb2eo"]
 
 [ext_resource type="Script" path="res://Backgrounds/background.gd" id="1_bb6e8"]
-[ext_resource type="Texture2D" uid="uid://daoemrxae6ici" path="res://Assets/sunny-land/assets/environment/back.png" id="1_i15o0"]
-[ext_resource type="Texture2D" uid="uid://cnirs3jed27mi" path="res://Assets/sunny-land/assets/environment/middle.png" id="2_51bp4"]
+[ext_resource type="Texture2D" uid="uid://bw2lc5cwtpplp" path="res://Assets/sunny-land/assets/environment/back.png" id="1_i15o0"]
+[ext_resource type="Texture2D" uid="uid://fabc5crxbwos" path="res://Assets/sunny-land/assets/environment/middle.png" id="2_51bp4"]
 
 [node name="Background" type="ParallaxBackground"]
 script = ExtResource("1_bb6e8")

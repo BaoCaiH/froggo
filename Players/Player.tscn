@@ -1,10 +1,10 @@
 [gd_scene load_steps=28 format=3 uid="uid://m3tq43uenlg7"]
 
 [ext_resource type="Script" path="res://Players/Player.gd" id="1_dqlbw"]
-[ext_resource type="Texture2D" uid="uid://bvu1qgqt2hlk4" path="res://Assets/Sunny-land-assets-files/PNG/spritesheets/player-hurt.png" id="2_2q6jo"]
-[ext_resource type="Texture2D" uid="uid://cq1jivcajndoc" path="res://Assets/Sunny-land-assets-files/PNG/spritesheets/player-idle.png" id="3_lsjxs"]
-[ext_resource type="Texture2D" uid="uid://bgydeteiyqkjw" path="res://Assets/Sunny-land-assets-files/PNG/spritesheets/player-jump.png" id="4_ej3sp"]
-[ext_resource type="Texture2D" uid="uid://bpko8ncafvtck" path="res://Assets/Sunny-land-assets-files/PNG/spritesheets/payer-run.png" id="5_4ygu0"]
+[ext_resource type="Texture2D" uid="uid://cd3rh70mmnhsb" path="res://Assets/Sunny-land-assets-files/PNG/spritesheets/player-hurt.png" id="2_2q6jo"]
+[ext_resource type="Texture2D" uid="uid://djrhh7xidichl" path="res://Assets/Sunny-land-assets-files/PNG/spritesheets/player-idle.png" id="3_lsjxs"]
+[ext_resource type="Texture2D" uid="uid://c8n00rj475n81" path="res://Assets/Sunny-land-assets-files/PNG/spritesheets/player-jump.png" id="4_ej3sp"]
+[ext_resource type="Texture2D" uid="uid://cjb451iawrno3" path="res://Assets/Sunny-land-assets-files/PNG/spritesheets/payer-run.png" id="5_4ygu0"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xxvpc"]
 radius = 5.0
@@ -271,13 +271,14 @@ _data = {
 script = ExtResource("1_dqlbw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 6)
+position = Vector2(-1, -10)
 shape = SubResource("CapsuleShape2D_xxvpc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_l5gmo")
 animation = &"Idle"
-metadata/_edit_lock_ = true
+frame = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
