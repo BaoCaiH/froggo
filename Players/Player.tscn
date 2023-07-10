@@ -1,13 +1,13 @@
-[gd_scene load_steps=28 format=3 uid="uid://m3tq43uenlg7"]
+[gd_scene load_steps=29 format=3 uid="uid://m3tq43uenlg7"]
 
 [ext_resource type="Script" path="res://Players/Player.gd" id="1_dqlbw"]
-[ext_resource type="Texture2D" uid="uid://cd3rh70mmnhsb" path="res://Assets/Sunny-land-assets-files/PNG/spritesheets/player-hurt.png" id="2_2q6jo"]
-[ext_resource type="Texture2D" uid="uid://djrhh7xidichl" path="res://Assets/Sunny-land-assets-files/PNG/spritesheets/player-idle.png" id="3_lsjxs"]
-[ext_resource type="Texture2D" uid="uid://c8n00rj475n81" path="res://Assets/Sunny-land-assets-files/PNG/spritesheets/player-jump.png" id="4_ej3sp"]
-[ext_resource type="Texture2D" uid="uid://cjb451iawrno3" path="res://Assets/Sunny-land-assets-files/PNG/spritesheets/payer-run.png" id="5_4ygu0"]
+[ext_resource type="Texture2D" uid="uid://dtgh24nxa5bft" path="res://Assets/Sunny-land-assets-files/PNG/spritesheets/player-hurt.png" id="2_2q6jo"]
+[ext_resource type="Texture2D" uid="uid://c7vcpqy6f7f1i" path="res://Assets/Sunny-land-assets-files/PNG/spritesheets/player-idle.png" id="3_lsjxs"]
+[ext_resource type="Texture2D" uid="uid://doitnt7u5o0j8" path="res://Assets/Sunny-land-assets-files/PNG/spritesheets/player-jump.png" id="4_ej3sp"]
+[ext_resource type="Texture2D" uid="uid://c154w77wfp2kb" path="res://Assets/Sunny-land-assets-files/PNG/spritesheets/payer-run.png" id="5_4ygu0"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xxvpc"]
-radius = 5.0
+radius = 6.0
 height = 20.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1d20e"]
@@ -267,6 +267,9 @@ _data = {
 "Run": SubResource("Animation_yvlcl")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_s8qul"]
+radius = 5.0
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_dqlbw")
 
@@ -293,3 +296,10 @@ autoplay = "Idle"
 libraries = {
 "": SubResource("AnimationLibrary_qwv6n")
 }
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(-1, -4)
+shape = SubResource("CircleShape2D_s8qul")
+debug_color = Color(0.996078, 0, 0.207843, 0.419608)
