@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://bpek6cbbbskqy"]
+[gd_scene load_steps=29 format=3 uid="uid://bpek6cbbbskqy"]
 
 [ext_resource type="Texture2D" uid="uid://bcjwjacjq8p5c" path="res://Assets/Sunny-land-assets-files/PNG/spritesheets/enemy-deadth.png" id="1_2wq80"]
 [ext_resource type="Script" path="res://Characters/Frog.gd" id="1_qd03s"]
@@ -273,7 +273,12 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_iqo6j"]
 radius = 7.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l4154"]
+radius = 5.0
+height = 18.0
+
 [node name="Frog" type="CharacterBody2D"]
+safe_margin = 0.001
 script = ExtResource("1_qd03s")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -285,7 +290,7 @@ debug_color = Color(0, 0.6, 0.701961, 0.419608)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -11)
 sprite_frames = SubResource("SpriteFrames_j673h")
-animation = &"Idle"
+animation = &"Jump"
 frame = 1
 flip_h = true
 metadata/_edit_lock_ = true
@@ -308,6 +313,13 @@ libraries = {
 position = Vector2(0, -11)
 shape = SubResource("CircleShape2D_iqo6j")
 
+[node name="HitBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+shape = SubResource("CapsuleShape2D_l4154")
+debug_color = Color(0.996078, 0, 0.203922, 0.419608)
+
 [connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
 [connection signal="body_exited" from="PlayerDetection" to="." method="_on_player_detection_body_exited"]
 [connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]
+[connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]

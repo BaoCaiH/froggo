@@ -560,7 +560,7 @@ position = Vector2(319, 487)
 script = ExtResource("6_boive")
 
 [node name="Frog1" type="Sprite2D" parent="HUD"]
-position = Vector2(10, 10)
+position = Vector2(11, 10)
 scale = Vector2(1.7, 1.7)
 texture = ExtResource("6_sidkw")
 centered = false

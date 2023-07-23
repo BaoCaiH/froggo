@@ -22,12 +22,12 @@ func _ready():
 
 
 func _process(delta):
-	curr_n_mob = mobs.get_children().size()
+	curr_n_mob = mobs.get_child_count()
 	if curr_n_mob == 0:
 		get_tree().quit()
-	if curr_n_mob != prev_n_mob:
-		for i in range(children.size()):
-			if i >= children.size() - curr_n_mob:
-				children[i].modulate = dimming
-			else:
-				children[i].modulate = Color(1, 1, 1, 1)
+	# if curr_n_mob != prev_n_mob:
+	for i in range(children.size()):
+		if i >= children.size() - curr_n_mob:
+			children[i].modulate = dimming
+		else:
+			children[i].modulate = Color(1, 1, 1, 1)

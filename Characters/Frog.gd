@@ -14,6 +14,11 @@ var is_play_death = false
 @onready var sprite = get_node("AnimatedSprite2D")
 @onready var box = get_node("CollisionShape2D")
 @onready var hurt_box = get_node("HurtBox")
+@onready var hit_box = get_node("HitBox")
+@onready var mobs = self.get_parent()
+@onready var world = mobs.get_parent()
+@onready var hud = world.get_node("HUD")
+@onready var this_scene = load(self.scene_file_path)
 
 func _ready():
 	print("Frog entered")
@@ -36,14 +41,17 @@ func _physics_process(delta):
 			anim.play("Jump")
 			box.position = Vector2(5 * direction.x, -15)
 			hurt_box.position = Vector2(5 * direction.x, -6)
+			hit_box.position = Vector2(6 * direction.x, -6)
 		elif self.velocity.y > 0:
 			anim.play("Fall")
 			box.position = Vector2(4 * direction.x, -9)
 			hurt_box.position = Vector2(4 * direction.x, 0)
+			hit_box.position = Vector2(6 * direction.x, 0)
 		else:
 			anim.play("Idle")
 			box.position = Vector2(0, -9)
 			hurt_box.position = Vector2(0, 0)
+			hit_box.position = Vector2(0, 0)
 		move_and_slide()
 
 func _on_player_detection_body_entered(body):
@@ -66,3 +74,13 @@ func _on_hurt_box_area_entered(area):
 		# Play death
 		is_dead = true
 		
+
+func _on_hit_box_body_entered(body):
+	if body.name == "Player":
+		if mobs.get_child_count() < hud.get_child_count():
+			var another_frog = this_scene.instantiate()
+			another_frog.position = Vector2(
+				clamp(100 * direction.x + position.x, 100, 1000),
+				clamp(-50 + position.y, 100, 350)
+			)
+			mobs.add_child(another_frog)
