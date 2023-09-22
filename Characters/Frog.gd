@@ -73,7 +73,7 @@ func _on_hurt_box_area_entered(area):
 		parent.velocity.y = JUMP_VELOCITY
 		# Play death
 		is_dead = true
-		
+
 
 func _on_hit_box_body_entered(body):
 	if body.name == "Player":
@@ -83,4 +83,4 @@ func _on_hit_box_body_entered(body):
 				clamp(100 * direction.x + position.x, 100, 1000),
 				clamp(-50 + position.y, 100, 350)
 			)
-			mobs.add_child(another_frog)
+			mobs.call_deferred("add_child", another_frog)

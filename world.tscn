@@ -2,11 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://m3tq43uenlg7" path="res://Players/Player.tscn" id="1_1q5af"]
 [ext_resource type="Script" path="res://Backgrounds/background.gd" id="1_a1q71"]
-[ext_resource type="Texture2D" uid="uid://cjbmr42thfcw6" path="res://Assets/sunny-land/assets/environment/tileset.png" id="1_xdsts"]
-[ext_resource type="Texture2D" uid="uid://bp1hgff7rsr18" path="res://Assets/sunny-land/assets/environment/back.png" id="2_685ud"]
+[ext_resource type="Texture2D" uid="uid://ccc1u6glcvkfw" path="res://Assets/sunny-land/assets/environment/tileset.png" id="1_xdsts"]
+[ext_resource type="Texture2D" uid="uid://bw2lc5cwtpplp" path="res://Assets/sunny-land/assets/environment/back.png" id="2_685ud"]
 [ext_resource type="PackedScene" uid="uid://bpek6cbbbskqy" path="res://Characters/Frog.tscn" id="5_hdicb"]
 [ext_resource type="Script" path="res://FrogHud.gd" id="6_boive"]
-[ext_resource type="Texture2D" uid="uid://b0kupbpyjxsq4" path="res://Assets/Sunny-land-assets-files/PNG/sprites/frog/idle/frog-idle-1.png" id="6_sidkw"]
+[ext_resource type="Texture2D" uid="uid://l04hh70mhy5p" path="res://Assets/Sunny-land-assets-files/PNG/sprites/frog/idle/frog-idle-1.png" id="6_sidkw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2vlwm"]
 texture = ExtResource("1_xdsts")
