@@ -1,64 +1,70 @@
 [gd_scene load_steps=29 format=3 uid="uid://bpek6cbbbskqy"]
 
-[ext_resource type="Texture2D" uid="uid://c487yskex6ws7" path="res://Assets/Sunny-land-assets-files/PNG/spritesheets/enemy-deadth.png" id="1_2wq80"]
-[ext_resource type="Texture2D" uid="uid://yie07y8pmk7r" path="res://Assets/Sunny-land-assets-files/PNG/spritesheets/frog-idle.png" id="1_tjct0"]
 [ext_resource type="Script" path="res://Scripts/Frog.gd" id="1_yyax4"]
-[ext_resource type="Texture2D" uid="uid://bbjs7skmrahjj" path="res://Assets/Sunny-land-assets-files/PNG/spritesheets/frog-jump.png" id="2_0imo2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vpgui"]
 radius = 9.0
 height = 18.0
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uxiq6"]
+load_path = "res://.godot/imported/enemy-deadth.png-1b0ef291e06d2f3abe6aa135ed63a75d.ctex"
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_opbb1"]
-atlas = ExtResource("1_2wq80")
+atlas = SubResource("CompressedTexture2D_uxiq6")
 region = Rect2(0, 0, 40, 41)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vjf10"]
-atlas = ExtResource("1_2wq80")
+atlas = SubResource("CompressedTexture2D_uxiq6")
 region = Rect2(40, 0, 40, 41)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w8e58"]
-atlas = ExtResource("1_2wq80")
+atlas = SubResource("CompressedTexture2D_uxiq6")
 region = Rect2(80, 0, 40, 41)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eg8rm"]
-atlas = ExtResource("1_2wq80")
+atlas = SubResource("CompressedTexture2D_uxiq6")
 region = Rect2(120, 0, 40, 41)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ysf53"]
-atlas = ExtResource("1_2wq80")
+atlas = SubResource("CompressedTexture2D_uxiq6")
 region = Rect2(160, 0, 40, 41)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jigab"]
-atlas = ExtResource("1_2wq80")
+atlas = SubResource("CompressedTexture2D_uxiq6")
 region = Rect2(200, 0, 40, 41)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lpy6a"]
+load_path = "res://.godot/imported/frog-idle.png-77731e2d851aab7e9d88a554112e4ceb.ctex"
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_w5qlb"]
-atlas = ExtResource("1_tjct0")
+atlas = SubResource("CompressedTexture2D_lpy6a")
 region = Rect2(0, 0, 35, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b71t4"]
-atlas = ExtResource("1_tjct0")
+atlas = SubResource("CompressedTexture2D_lpy6a")
 region = Rect2(35, 0, 35, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fnx2f"]
-atlas = ExtResource("1_tjct0")
+atlas = SubResource("CompressedTexture2D_lpy6a")
 region = Rect2(70, 0, 35, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gq34d"]
-atlas = ExtResource("1_tjct0")
+atlas = SubResource("CompressedTexture2D_lpy6a")
 region = Rect2(105, 0, 35, 32)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ejtua"]
+load_path = "res://.godot/imported/frog-jump.png-f88766c78af6d35c1fa9d44ad2471032.ctex"
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_itf5p"]
-atlas = ExtResource("2_0imo2")
+atlas = SubResource("CompressedTexture2D_ejtua")
 region = Rect2(0, 0, 35, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nwvey"]
-atlas = ExtResource("2_0imo2")
+atlas = SubResource("CompressedTexture2D_ejtua")
 region = Rect2(35, 0, 35, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ese8q"]
-atlas = ExtResource("2_0imo2")
+atlas = SubResource("CompressedTexture2D_ejtua")
 region = Rect2(70, 0, 35, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_j673h"]

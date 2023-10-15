@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+enum STATE {IDLE, MOVE}
 
 const health = 10
 const SPEED = 300.0
@@ -10,12 +11,16 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var anim = get_node("AnimationPlayer")
 @onready var sprite = get_node("AnimatedSprite2D")
+@onready var state = STATE.IDLE
 
 func _ready():
 	anim.play("Idle")
 
 
 func _physics_process(delta):
+	if state == 0:
+		return
+
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta

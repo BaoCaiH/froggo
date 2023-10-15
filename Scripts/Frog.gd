@@ -17,18 +17,15 @@ var is_play_death = false
 @onready var hit_box = get_node("HitBox")
 @onready var mobs = self.get_parent()
 @onready var world = mobs.get_parent()
-@onready var hud = world.get_node("HUD")
+@onready var hud = world.get_node("FrogHud")
 @onready var this_scene = load(self.scene_file_path)
 
 func _ready():
 	print("Frog entered")
-	# print(box.position)
 
 func _physics_process(delta):
 	if is_dead:
 		anim.play("Death")
-		# await anim.animation_finished
-		# self.queue_free()
 	else:
 		velocity.y += gravity * delta
 		if is_on_floor():

@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqu7a0rlqmpv6"]
+
+[ext_resource type="Texture2D" uid="uid://4y4uplwrnbgh" path="res://Assets/gray-circle.png" id="1_v03lu"]
+[ext_resource type="Texture2D" uid="uid://cckjgl75llwyf" path="res://Assets/light-green-circle.png" id="2_3qi5r"]
+
+[node name="TimerHud" type="CanvasLayer"]
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -140.0
+offset_top = 20.0
+offset_right = -108.0
+offset_bottom = 52.0
+scale = Vector2(2, 2)
+value = 34.0
+fill_mode = 4
+texture_under = ExtResource("1_v03lu")
+texture_progress = ExtResource("2_3qi5r")
