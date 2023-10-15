@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://gkx7yowcl28b"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_h0ug0"]
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_i16jr"]
 [ext_resource type="PackedScene" uid="uid://dl88or6dnb2eo" path="res://Backgrounds/background.tscn" id="2_yh54x"]
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1_h0ug0")
+script = ExtResource("1_i16jr")
 
 [node name="Play" type="Button" parent="."]
 offset_left = 450.0

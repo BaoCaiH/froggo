@@ -22,7 +22,7 @@ var is_play_death = false
 
 func _ready():
 	print("Frog entered")
-	print(box.position)
+	# print(box.position)
 
 func _physics_process(delta):
 	if is_dead:
@@ -61,9 +61,10 @@ func _on_player_detection_body_entered(body):
 
 
 func _on_player_detection_body_exited(body):
-	chase = false
-	player = null
-	anim.play("Idle")
+	if body.name == "Player":
+		chase = false
+		player = null
+		anim.play("Idle")
 
 
 func _on_hurt_box_area_entered(area):

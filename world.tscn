@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://ccc1u6glcvkfw" path="res://Assets/sunny-land/assets/environment/tileset.png" id="1_xdsts"]
 [ext_resource type="Texture2D" uid="uid://bw2lc5cwtpplp" path="res://Assets/sunny-land/assets/environment/back.png" id="2_685ud"]
 [ext_resource type="PackedScene" uid="uid://bpek6cbbbskqy" path="res://Characters/Frog.tscn" id="5_hdicb"]
-[ext_resource type="Script" path="res://FrogHud.gd" id="6_boive"]
+[ext_resource type="Script" path="res://Scripts/FrogHud.gd" id="6_fomtc"]
 [ext_resource type="Texture2D" uid="uid://l04hh70mhy5p" path="res://Assets/Sunny-land-assets-files/PNG/sprites/frog/idle/frog-idle-1.png" id="6_sidkw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2vlwm"]
@@ -557,7 +557,7 @@ position = Vector2(573, 290)
 position = Vector2(319, 487)
 
 [node name="HUD" type="CanvasLayer" parent="."]
-script = ExtResource("6_boive")
+script = ExtResource("6_fomtc")
 
 [node name="Frog1" type="Sprite2D" parent="HUD"]
 position = Vector2(11, 10)

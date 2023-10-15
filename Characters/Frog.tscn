@@ -1,8 +1,8 @@
 [gd_scene load_steps=29 format=3 uid="uid://bpek6cbbbskqy"]
 
 [ext_resource type="Texture2D" uid="uid://c487yskex6ws7" path="res://Assets/Sunny-land-assets-files/PNG/spritesheets/enemy-deadth.png" id="1_2wq80"]
-[ext_resource type="Script" path="res://Characters/Frog.gd" id="1_qd03s"]
 [ext_resource type="Texture2D" uid="uid://yie07y8pmk7r" path="res://Assets/Sunny-land-assets-files/PNG/spritesheets/frog-idle.png" id="1_tjct0"]
+[ext_resource type="Script" path="res://Scripts/Frog.gd" id="1_yyax4"]
 [ext_resource type="Texture2D" uid="uid://bbjs7skmrahjj" path="res://Assets/Sunny-land-assets-files/PNG/spritesheets/frog-jump.png" id="2_0imo2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vpgui"]
@@ -279,7 +279,7 @@ height = 18.0
 
 [node name="Frog" type="CharacterBody2D"]
 safe_margin = 0.001
-script = ExtResource("1_qd03s")
+script = ExtResource("1_yyax4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 top_level = true

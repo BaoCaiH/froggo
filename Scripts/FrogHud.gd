@@ -21,7 +21,7 @@ func _ready():
 	curr_n_mob = prev_n_mob
 
 
-func _process(delta):
+func _process(_delta):
 	curr_n_mob = mobs.get_child_count()
 	if curr_n_mob == 0:
 		get_tree().quit()
