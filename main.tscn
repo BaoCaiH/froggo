@@ -39,5 +39,4 @@ position = Vector2(576, 564)
 scale = Vector2(3, 3)
 texture = ExtResource("6_hgqoo")
 
-[connection signal="mouse_entered" from="Play" to="." method="_on_play_mouse_entered"]
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
