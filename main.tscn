@@ -1,30 +1,43 @@
-[gd_scene load_steps=4 format=3 uid="uid://gkx7yowcl28b"]
+[gd_scene load_steps=7 format=3 uid="uid://gkx7yowcl28b"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_i16jr"]
 [ext_resource type="PackedScene" uid="uid://dl88or6dnb2eo" path="res://Backgrounds/background.tscn" id="2_yh54x"]
-[ext_resource type="PackedScene" uid="uid://bqu7a0rlqmpv6" path="res://TimerHud/timer_hud.tscn" id="3_j6s15"]
+[ext_resource type="Texture2D" uid="uid://bbxdk5oa4280v" path="res://Assets/play_hover.png" id="4_ryf57"]
+[ext_resource type="Texture2D" uid="uid://caary8npa1k4s" path="res://Assets/play.png" id="4_x7bvl"]
+[ext_resource type="AudioStream" uid="uid://cai5u6ubgms08" path="res://Assets/sunny-land/assets/sound/platformer_level03_loop.ogg" id="5_u1kec"]
+[ext_resource type="Texture2D" uid="uid://cxsk5eivb4roq" path="res://Assets/credits.png" id="6_hgqoo"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_i16jr")
-total_time = 10.0
-
-[node name="Play" type="Button" parent="."]
-offset_left = 450.0
-offset_top = 120.0
-offset_right = 650.0
-offset_bottom = 270.0
-text = "Play"
-
-[node name="Quit" type="Button" parent="."]
-offset_left = 450.0
-offset_top = 300.0
-offset_right = 650.0
-offset_bottom = 450.0
-text = "Quit"
 
 [node name="Background" parent="." instance=ExtResource("2_yh54x")]
 
-[node name="TimerHud" parent="." instance=ExtResource("3_j6s15")]
+[node name="Play" type="TextureButton" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 576.0
+offset_top = 300.0
+offset_right = 627.0
+offset_bottom = 332.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+pivot_offset = Vector2(34, 22)
+texture_normal = ExtResource("4_x7bvl")
+texture_hover = ExtResource("4_ryf57")
+stretch_mode = 3
 
+[node name="BGM" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_u1kec")
+autoplay = true
+
+[node name="Credits" type="Sprite2D" parent="."]
+position = Vector2(576, 564)
+scale = Vector2(3, 3)
+texture = ExtResource("6_hgqoo")
+
+[connection signal="mouse_entered" from="Play" to="." method="_on_play_mouse_entered"]
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

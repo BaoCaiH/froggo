@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://y8g6dbsrr0im"]
+[gd_scene load_steps=17 format=3 uid="uid://y8g6dbsrr0im"]
 
 [ext_resource type="PackedScene" uid="uid://m3tq43uenlg7" path="res://Players/Player.tscn" id="1_1q5af"]
 [ext_resource type="Script" path="res://Scripts/world.gd" id="1_8u1oi"]
@@ -8,7 +8,12 @@
 [ext_resource type="PackedScene" uid="uid://bpek6cbbbskqy" path="res://Characters/Frog.tscn" id="5_hdicb"]
 [ext_resource type="Texture2D" uid="uid://b0kupbpyjxsq4" path="res://Assets/Sunny-land-assets-files/PNG/sprites/frog/idle/frog-idle-1.png" id="6_sidkw"]
 [ext_resource type="PackedScene" uid="uid://bqu7a0rlqmpv6" path="res://TimerHud/timer_hud.tscn" id="8_mhgul"]
+[ext_resource type="Texture2D" uid="uid://jsbesnv5bite" path="res://Assets/lose.png" id="10_f6vgc"]
 [ext_resource type="Texture2D" uid="uid://cvg7tb1e7sbi" path="res://Assets/instruction.png" id="10_xkq5n"]
+[ext_resource type="Texture2D" uid="uid://bpltgvhsd8m0g" path="res://Assets/win.png" id="11_4ow0t"]
+[ext_resource type="Texture2D" uid="uid://bilxkx55pt5k0" path="res://Assets/numbers/0.png" id="12_rul4m"]
+[ext_resource type="Texture2D" uid="uid://bufef56is2x67" path="res://Assets/numbers/dot.png" id="13_v3ne6"]
+[ext_resource type="AudioStream" uid="uid://cai5u6ubgms08" path="res://Assets/sunny-land/assets/sound/platformer_level03_loop.ogg" id="14_8ob3i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2vlwm"]
 texture = ExtResource("1_xdsts")
@@ -563,7 +568,16 @@ position = Vector2(573, 290)
 [node name="Mobs" type="Node2D" parent="."]
 
 [node name="Frog" parent="Mobs" instance=ExtResource("5_hdicb")]
-position = Vector2(319, 487)
+position = Vector2(170, 487)
+
+[node name="Frog2" parent="Mobs" instance=ExtResource("5_hdicb")]
+position = Vector2(420, 487)
+
+[node name="Frog3" parent="Mobs" instance=ExtResource("5_hdicb")]
+position = Vector2(670, 487)
+
+[node name="Frog4" parent="Mobs" instance=ExtResource("5_hdicb")]
+position = Vector2(920, 487)
 
 [node name="FrogHud" type="CanvasLayer" parent="."]
 
@@ -585,6 +599,24 @@ scale = Vector2(1.7, 1.7)
 texture = ExtResource("6_sidkw")
 centered = false
 
+[node name="Frog4" type="Sprite2D" parent="FrogHud"]
+position = Vector2(220, 10)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("6_sidkw")
+centered = false
+
+[node name="Frog5" type="Sprite2D" parent="FrogHud"]
+position = Vector2(290, 10)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("6_sidkw")
+centered = false
+
+[node name="Frog6" type="Sprite2D" parent="FrogHud"]
+position = Vector2(360, 10)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("6_sidkw")
+centered = false
+
 [node name="TimerHud" parent="." instance=ExtResource("8_mhgul")]
 
 [node name="InfoHud" type="CanvasLayer" parent="."]
@@ -593,4 +625,33 @@ scale = Vector2(4, 4)
 transform = Transform2D(4, 0, 0, 4, 576, 324)
 
 [node name="Instruction" type="Sprite2D" parent="InfoHud"]
+visible = false
 texture = ExtResource("10_xkq5n")
+
+[node name="Lose" type="Sprite2D" parent="InfoHud"]
+visible = false
+texture = ExtResource("10_f6vgc")
+
+[node name="Win" type="Sprite2D" parent="InfoHud"]
+visible = false
+texture = ExtResource("11_4ow0t")
+
+[node name="Tens" type="Sprite2D" parent="InfoHud/Win"]
+position = Vector2(-7.75, -7.5)
+texture = ExtResource("12_rul4m")
+
+[node name="Digits" type="Sprite2D" parent="InfoHud/Win"]
+position = Vector2(-3.75, -7.5)
+texture = ExtResource("12_rul4m")
+
+[node name="Dot" type="Sprite2D" parent="InfoHud/Win"]
+position = Vector2(-0.75, -7.5)
+texture = ExtResource("13_v3ne6")
+
+[node name="Tenth" type="Sprite2D" parent="InfoHud/Win"]
+position = Vector2(2.25, -7.5)
+texture = ExtResource("12_rul4m")
+
+[node name="BGM" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_8ob3i")
+autoplay = true
