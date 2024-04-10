@@ -300,10 +300,10 @@ limit_bottom = 600
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Camera2D")
-autoplay = "Idle"
 libraries = {
 "": SubResource("AnimationLibrary_qwv6n")
 }
+autoplay = "Idle"
 
 [node name="Hitbox" type="Area2D" parent="."]
 
