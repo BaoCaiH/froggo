@@ -288,7 +288,7 @@ shape = SubResource("CapsuleShape2D_xxvpc")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_l5gmo")
-animation = &"Idle"
+animation = &"Jump"
 frame = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
