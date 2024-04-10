@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bqu7a0rlqmpv6"]
 
-[ext_resource type="Texture2D" uid="uid://4y4uplwrnbgh" path="res://Assets/gray-circle.png" id="1_v03lu"]
-[ext_resource type="Texture2D" uid="uid://cckjgl75llwyf" path="res://Assets/light-green-circle.png" id="2_3qi5r"]
+[ext_resource type="Texture2D" uid="uid://g7lgjkp25ctg" path="res://Assets/gray-circle.png" id="1_v03lu"]
+[ext_resource type="Texture2D" uid="uid://0eo62rrk0rqa" path="res://Assets/light-green-circle.png" id="2_3qi5r"]
 
 [node name="TimerHud" type="CanvasLayer"]
 

@@ -1,92 +1,43 @@
-[gd_scene load_steps=29 format=3 uid="uid://bpek6cbbbskqy"]
+[gd_scene load_steps=25 format=3 uid="uid://bpek6cbbbskqy"]
 
 [ext_resource type="Script" path="res://Scripts/Frog.gd" id="1_yyax4"]
+[ext_resource type="Texture2D" uid="uid://ccspo3aulf231" path="res://Assets/Sunny-land-assets-files/PNG/sprites/enemy-death/enemy-death-1.png" id="2_rpo30"]
+[ext_resource type="Texture2D" uid="uid://bqyc6j0xb1cy3" path="res://Assets/Sunny-land-assets-files/PNG/sprites/enemy-death/enemy-death-2.png" id="3_15cdp"]
+[ext_resource type="Texture2D" uid="uid://cd1ttdn7n5o4a" path="res://Assets/Sunny-land-assets-files/PNG/sprites/enemy-death/enemy-death-3.png" id="4_ttfp1"]
+[ext_resource type="Texture2D" uid="uid://xviod63406gv" path="res://Assets/Sunny-land-assets-files/PNG/sprites/enemy-death/enemy-death-4.png" id="5_thtlk"]
+[ext_resource type="Texture2D" uid="uid://cay4u8aflt7ih" path="res://Assets/Sunny-land-assets-files/PNG/sprites/enemy-death/enemy-death-5.png" id="6_ixjpd"]
+[ext_resource type="Texture2D" uid="uid://c8yon3vuuwlrw" path="res://Assets/Sunny-land-assets-files/PNG/sprites/enemy-death/enemy-death-6.png" id="7_vg0fq"]
+[ext_resource type="Texture2D" uid="uid://b2a8c6n14sc1r" path="res://Assets/Sunny-land-assets-files/PNG/sprites/frog/idle/frog-idle-1.png" id="8_ysjrg"]
+[ext_resource type="Texture2D" uid="uid://ebcn35ajt7sj" path="res://Assets/Sunny-land-assets-files/PNG/sprites/frog/idle/frog-idle-2.png" id="9_h663l"]
+[ext_resource type="Texture2D" uid="uid://cat8o8dvdj4jo" path="res://Assets/Sunny-land-assets-files/PNG/sprites/frog/idle/frog-idle-3.png" id="10_bhjnr"]
+[ext_resource type="Texture2D" uid="uid://dy3uoh5okwdsf" path="res://Assets/Sunny-land-assets-files/PNG/sprites/frog/idle/frog-idle-4.png" id="11_bcu28"]
+[ext_resource type="Texture2D" uid="uid://bx3gp5jescnnu" path="res://Assets/Sunny-land-assets-files/PNG/sprites/frog/jump/frog-jump-1.png" id="12_hjhas"]
+[ext_resource type="Texture2D" uid="uid://nh26lnlmh32d" path="res://Assets/Sunny-land-assets-files/PNG/sprites/frog/jump/frog-jump-2.png" id="13_1ywyo"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vpgui"]
 radius = 9.0
 height = 18.0
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uxiq6"]
-load_path = "res://.godot/imported/enemy-deadth.png-1b0ef291e06d2f3abe6aa135ed63a75d.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_opbb1"]
-atlas = SubResource("CompressedTexture2D_uxiq6")
-region = Rect2(0, 0, 40, 41)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vjf10"]
-atlas = SubResource("CompressedTexture2D_uxiq6")
-region = Rect2(40, 0, 40, 41)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_w8e58"]
-atlas = SubResource("CompressedTexture2D_uxiq6")
-region = Rect2(80, 0, 40, 41)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_eg8rm"]
-atlas = SubResource("CompressedTexture2D_uxiq6")
-region = Rect2(120, 0, 40, 41)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ysf53"]
-atlas = SubResource("CompressedTexture2D_uxiq6")
-region = Rect2(160, 0, 40, 41)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jigab"]
-atlas = SubResource("CompressedTexture2D_uxiq6")
-region = Rect2(200, 0, 40, 41)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lpy6a"]
-load_path = "res://.godot/imported/frog-idle.png-77731e2d851aab7e9d88a554112e4ceb.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_w5qlb"]
-atlas = SubResource("CompressedTexture2D_lpy6a")
-region = Rect2(0, 0, 35, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_b71t4"]
-atlas = SubResource("CompressedTexture2D_lpy6a")
-region = Rect2(35, 0, 35, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fnx2f"]
-atlas = SubResource("CompressedTexture2D_lpy6a")
-region = Rect2(70, 0, 35, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gq34d"]
-atlas = SubResource("CompressedTexture2D_lpy6a")
-region = Rect2(105, 0, 35, 32)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ejtua"]
-load_path = "res://.godot/imported/frog-jump.png-f88766c78af6d35c1fa9d44ad2471032.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_itf5p"]
-atlas = SubResource("CompressedTexture2D_ejtua")
-region = Rect2(0, 0, 35, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nwvey"]
-atlas = SubResource("CompressedTexture2D_ejtua")
-region = Rect2(35, 0, 35, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ese8q"]
-atlas = SubResource("CompressedTexture2D_ejtua")
-region = Rect2(70, 0, 35, 32)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_j673h"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_opbb1")
+"texture": ExtResource("2_rpo30")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vjf10")
+"texture": ExtResource("3_15cdp")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_w8e58")
+"texture": ExtResource("4_ttfp1")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_eg8rm")
+"texture": ExtResource("5_thtlk")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ysf53")
+"texture": ExtResource("6_ixjpd")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jigab")
+"texture": ExtResource("7_vg0fq")
 }],
 "loop": false,
 "name": &"Death",
@@ -94,16 +45,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_w5qlb")
+"texture": ExtResource("8_ysjrg")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_b71t4")
+"texture": ExtResource("9_h663l")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_fnx2f")
+"texture": ExtResource("10_bhjnr")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gq34d")
+"texture": ExtResource("11_bcu28")
 }],
 "loop": true,
 "name": &"Idle",
@@ -111,13 +62,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_itf5p")
+"texture": ExtResource("8_ysjrg")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_nwvey")
+"texture": ExtResource("12_hjhas")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ese8q")
+"texture": ExtResource("13_1ywyo")
 }],
 "loop": true,
 "name": &"Jump",
@@ -307,10 +258,10 @@ visible = false
 shape = SubResource("CircleShape2D_e0tk8")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "Idle"
 libraries = {
 "": SubResource("AnimationLibrary_6x1rx")
 }
+autoplay = "Idle"
 
 [node name="HurtBox" type="Area2D" parent="."]
 

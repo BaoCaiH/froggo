@@ -1,87 +1,33 @@
-[gd_scene load_steps=29 format=3 uid="uid://m3tq43uenlg7"]
+[gd_scene load_steps=25 format=3 uid="uid://m3tq43uenlg7"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_exsxb"]
+[ext_resource type="Texture2D" uid="uid://bbuhcqmlm4o41" path="res://Assets/Sunny-land-assets-files/PNG/sprites/player/hurt/player-hurt-1.png" id="2_0oluk"]
+[ext_resource type="Texture2D" uid="uid://bgasuoti66nfb" path="res://Assets/Sunny-land-assets-files/PNG/sprites/player/hurt/player-hurt-2.png" id="3_ogntb"]
+[ext_resource type="Texture2D" uid="uid://c3ynvag2uivsl" path="res://Assets/Sunny-land-assets-files/PNG/sprites/player/idle/player-idle-1.png" id="4_o3hhb"]
+[ext_resource type="Texture2D" uid="uid://drolv17yudkgr" path="res://Assets/Sunny-land-assets-files/PNG/sprites/player/idle/player-idle-2.png" id="5_dbfn4"]
+[ext_resource type="Texture2D" uid="uid://dcknt5sjowtqq" path="res://Assets/Sunny-land-assets-files/PNG/sprites/player/idle/player-idle-3.png" id="6_34jwh"]
+[ext_resource type="Texture2D" uid="uid://c3lkx0q6bxgys" path="res://Assets/Sunny-land-assets-files/PNG/sprites/player/idle/player-idle-4.png" id="7_nbd7p"]
+[ext_resource type="Texture2D" uid="uid://d4fqtouhkebs3" path="res://Assets/Sunny-land-assets-files/PNG/sprites/player/jump/player-jump-1.png" id="8_qw12r"]
+[ext_resource type="Texture2D" uid="uid://c58g8dc5uagso" path="res://Assets/Sunny-land-assets-files/PNG/sprites/player/jump/player-jump-2.png" id="9_qytqk"]
+[ext_resource type="Texture2D" uid="uid://dkq1cylgr8wll" path="res://Assets/Sunny-land-assets-files/PNG/sprites/player/run/player-run-1.png" id="10_46uti"]
+[ext_resource type="Texture2D" uid="uid://cj845gfl7s7rb" path="res://Assets/Sunny-land-assets-files/PNG/sprites/player/run/player-run-2.png" id="11_jwuit"]
+[ext_resource type="Texture2D" uid="uid://cht4x73s3iplk" path="res://Assets/Sunny-land-assets-files/PNG/sprites/player/run/player-run-3.png" id="12_o7bg7"]
+[ext_resource type="Texture2D" uid="uid://cstlqqtyh4de" path="res://Assets/Sunny-land-assets-files/PNG/sprites/player/run/player-run-4.png" id="13_1avva"]
+[ext_resource type="Texture2D" uid="uid://c88sses20bkkj" path="res://Assets/Sunny-land-assets-files/PNG/sprites/player/run/player-run-5.png" id="14_roxck"]
+[ext_resource type="Texture2D" uid="uid://dx24hl13kkl2b" path="res://Assets/Sunny-land-assets-files/PNG/sprites/player/run/player-run-6.png" id="15_3n3py"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xxvpc"]
 radius = 6.0
 height = 20.0
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_iq347"]
-load_path = "res://.godot/imported/player-hurt.png-627948666256cbf7b3ac4535a4cb3740.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1d20e"]
-atlas = SubResource("CompressedTexture2D_iq347")
-region = Rect2(0, 0, 33, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_n2cvs"]
-atlas = SubResource("CompressedTexture2D_iq347")
-region = Rect2(33, 0, 33, 32)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rlqke"]
-load_path = "res://.godot/imported/player-idle.png-921d2e8669da2277d3ae30ab6d516e23.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3kd37"]
-atlas = SubResource("CompressedTexture2D_rlqke")
-region = Rect2(0, 0, 33, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4topj"]
-atlas = SubResource("CompressedTexture2D_rlqke")
-region = Rect2(33, 0, 33, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0sqv2"]
-atlas = SubResource("CompressedTexture2D_rlqke")
-region = Rect2(66, 0, 33, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qybrf"]
-atlas = SubResource("CompressedTexture2D_rlqke")
-region = Rect2(99, 0, 33, 32)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0mih3"]
-load_path = "res://.godot/imported/player-jump.png-988f26e6c1697a9124547d2cb7ecc579.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6fgbm"]
-atlas = SubResource("CompressedTexture2D_0mih3")
-region = Rect2(0, 0, 33, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tpx13"]
-atlas = SubResource("CompressedTexture2D_0mih3")
-region = Rect2(33, 0, 33, 32)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_c5n2r"]
-load_path = "res://.godot/imported/payer-run.png-cb82f6758e2bde84748dc461edd6f576.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ri0xh"]
-atlas = SubResource("CompressedTexture2D_c5n2r")
-region = Rect2(0, 0, 33, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_js627"]
-atlas = SubResource("CompressedTexture2D_c5n2r")
-region = Rect2(33, 0, 33, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vfqpk"]
-atlas = SubResource("CompressedTexture2D_c5n2r")
-region = Rect2(66, 0, 33, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cjbws"]
-atlas = SubResource("CompressedTexture2D_c5n2r")
-region = Rect2(99, 0, 33, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0sx2e"]
-atlas = SubResource("CompressedTexture2D_c5n2r")
-region = Rect2(132, 0, 33, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3h22i"]
-atlas = SubResource("CompressedTexture2D_c5n2r")
-region = Rect2(165, 0, 33, 32)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_l5gmo"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1d20e")
+"texture": ExtResource("2_0oluk")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_n2cvs")
+"texture": ExtResource("3_ogntb")
 }],
 "loop": true,
 "name": &"Hurt",
@@ -89,16 +35,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3kd37")
+"texture": ExtResource("4_o3hhb")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4topj")
+"texture": ExtResource("5_dbfn4")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0sqv2")
+"texture": ExtResource("6_34jwh")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_qybrf")
+"texture": ExtResource("7_nbd7p")
 }],
 "loop": true,
 "name": &"Idle",
@@ -106,10 +52,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6fgbm")
+"texture": ExtResource("8_qw12r")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_tpx13")
+"texture": ExtResource("9_qytqk")
 }],
 "loop": true,
 "name": &"Jump",
@@ -117,22 +63,22 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ri0xh")
+"texture": ExtResource("10_46uti")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_js627")
+"texture": ExtResource("11_jwuit")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vfqpk")
+"texture": ExtResource("12_o7bg7")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_cjbws")
+"texture": ExtResource("13_1avva")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0sx2e")
+"texture": ExtResource("14_roxck")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3h22i")
+"texture": ExtResource("15_3n3py")
 }],
 "loop": true,
 "name": &"Run",
